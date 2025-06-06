@@ -1,9 +1,9 @@
 # UAV Coverage Path Planning in Mountainous Terrain (CAPG)
 
-[![arXiv](https://img.shields.io/badge/arXiv-2024.xxxxx-b31b1b.svg)](https://arxiv.org/abs/2024.xxxxx)
-[![IEEE RAL](https://img.shields.io/badge/IEEE%20RAL-2025-blue.svg)](https://ieeexplore.ieee.org/document/xxxxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-Submitted-b31b1b.svg)](#)
+[![IEEE RAL](https://img.shields.io/badge/IEEE%20RAL-Under%20Review-yellow.svg)](#)
 
-This repository contains the implementation and experimental data for the paper **"Contour-Aligned Path Generation for Energy-Aware UAV Coverage in Mountainous Terrain"** accepted to IEEE Robotics and Automation Letters (RAL) 2025.
+This repository contains the implementation and experimental data for the paper **"Contour-Aligned Path Generation for Energy-Aware UAV Coverage in Mountainous Terrain"** submitted to IEEE Robotics and Automation Letters (RAL).
 
 ## Overview
 
@@ -61,23 +61,20 @@ python framework_demo.py
 If you use this work in your research, please cite:
 
 ```bibtex
-@article{shao2025contour,
+@article{shao2024contour,
   title={Contour-Aligned Path Generation for Energy-Aware UAV Coverage in Mountainous Terrain},
-  author={Shao, Qi and Xu, Wenbin and Mao, Xuefei},
+  author={Shao, Qi and Mao, Xuefei and Xu, Wenbin},
   journal={IEEE Robotics and Automation Letters},
-  volume={10},
-  number={4},
-  pages={1--8},
-  year={2025},
-  publisher={IEEE}
+  note={Submitted},
+  year={2024}
 }
 ```
 
 ## Authors
 
 - **Qi Shao** - Beijing Institute of Technology
-- **Wenbin Xu** - Beijing Institute of Technology  
 - **Xuefei Mao** - Beijing Institute of Technology (Corresponding author)
+- **Wenbin Xu** - Beijing Institute of Technology
 
 ## License
 

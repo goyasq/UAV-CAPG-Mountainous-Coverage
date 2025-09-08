@@ -42,17 +42,26 @@ pip install -r requirements.txt
 
 ### Basic Usage
 
-**Step 1: Generate Contour Primitives**
+**Step 1: Data Preprocessing**
+```bash
+# Process DEM data (if using custom terrain data)
+python process_dem.py
+
+# Extract task areas from processed DEM
+python extract_task_areas.py
+```
+
+**Step 2: Generate Contour Primitives**
 ```bash
 python contour_path_generator.py
 ```
 
-**Step 2: Run CAPG-TCO Path Planning**
+**Step 3: Run CAPG-TCO Path Planning**
 ```bash
 python primitive_tsp_planner.py
 ```
 
-**Step 3: Run Baseline Methods (for comparison)**
+**Step 4: Run Baseline Methods (for comparison)**
 ```bash
 # Square Grid TSP
 python square_grid_tsp_planning.py
@@ -61,12 +70,12 @@ python square_grid_tsp_planning.py
 python grid_lawn_mower_planning.py
 ```
 
-**Step 4: Collect Performance Data**
+**Step 5: Collect Performance Data**
 ```bash
 python collect_runtime_data.py
 ```
 
-**Step 5: Generate Analysis and Visualizations**
+**Step 6: Generate Analysis and Visualizations**
 ```bash
 python comprehensive_analysis.py
 ```
@@ -86,6 +95,8 @@ python ablation_connection_study.py
 ## File Structure
 
 ```
+├── process_dem.py                       # DEM data preprocessing
+├── extract_task_areas.py                # Task area extraction
 ├── contour_path_generator.py            # Contour primitive generation
 ├── primitive_tsp_planner.py             # CAPG-TCO main algorithm
 ├── square_grid_tsp_planning.py          # Grid-based baseline
@@ -94,6 +105,7 @@ python ablation_connection_study.py
 ├── collect_runtime_data.py              # Performance data collection
 ├── comprehensive_analysis.py            # Results analysis and visualization
 ├── ablation_study_design.py             # Ablation study framework
+├── Data/                                # Raw DEM data and parameters
 ├── task_areas_diverse/                  # Test terrain data
 ├── path_primitives_diverse/             # Generated contour primitives
 └── requirements.txt                     # Python dependencies
@@ -101,10 +113,23 @@ python ablation_connection_study.py
 
 ## Data Requirements
 
-The framework requires Digital Elevation Model (DEM) data in the following format:
+### Raw Data
+The framework includes sample DEM data in the `Data/` folder:
+- `AW3D30huangshan.tif`: Sample GeoTIFF DEM file
+- `params.json`: Processing parameters
+
+### Processed Data Format
+After preprocessing, the framework requires terrain data in the following format:
 - `{area_id}_dem.npy`: Elevation data (2D numpy array)
-- `{area_id}_x_meters.npy`: X coordinates (2D numpy array)
+- `{area_id}_x_meters.npy`: X coordinates (2D numpy array)  
 - `{area_id}_y_meters.npy`: Y coordinates (2D numpy array)
+
+### Custom Data
+To use your own terrain data:
+1. Place GeoTIFF files in the `Data/` folder
+2. Update `params.json` with your processing parameters
+3. Run `process_dem.py` to convert to numpy format
+4. Run `extract_task_areas.py` to create test areas
 
 ## Citation
 

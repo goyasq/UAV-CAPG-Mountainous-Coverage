@@ -1,0 +1,12 @@
+{
+    "camera_fov": 84.0,
+    "flight_height": 80.0,
+    "side_overlap": 0.75,
+    "front_overlap": 0.75,
+    "desired_gsd": 2.5,
+    "energy_dist_weight": 0.1072,
+    "energy_angle_weight": 0.0104,
+    "energy_climb_weight": 0.007,
+    "uav_mass": 2.0,
+    "uav_efficiency": 0.75
+}

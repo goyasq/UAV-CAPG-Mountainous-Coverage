@@ -54,7 +54,6 @@ beautiful_framework_results*/
 path_primitives_*/
 
 # Large data files
-Data/
 processed_dem/
 task_areas_diverse/
 

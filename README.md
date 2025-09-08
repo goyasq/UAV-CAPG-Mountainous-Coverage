@@ -131,18 +131,6 @@ To use your own terrain data:
 3. Run `process_dem.py` to convert to numpy format
 4. Run `extract_task_areas.py` to create test areas
 
-## Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@article{shao2024energy,
-  title={Energy-Aware UAV Coverage Path Planning in Mountainous Terrain via Contour-Aligned Path Generation},
-  author={Shao, Qi and Mao, Xuefei and Xu, Wenbin},
-  journal={IEEE Transactions on Robotics},
-  year={2024}
-}
-```
 
 ## License
 
